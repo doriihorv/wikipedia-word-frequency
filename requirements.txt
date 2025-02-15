@@ -1,0 +1,5 @@
+fastapi
+pydantic
+wikipedia-api
+uvicorn
+httpx
