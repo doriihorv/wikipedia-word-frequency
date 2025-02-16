@@ -12,10 +12,8 @@ class KeywordsRequest(BaseModel):
 
 @app.get("/word-frequency")
 def word_frequency(article: str, depth:int):
-    print(f"called word_frequency with {article} and depth: {depth}")
     collected_article_texts = collect_article_texts(article, depth)
     return count_words(collected_article_texts)
-
 
 @app.post("/keywords")
 def keyword_frequency(request: KeywordsRequest):
